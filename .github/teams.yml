@@ -1,5 +1,6 @@
 testteam:
   description: The amazing design team
+  access: write
   members:
   - name: Dan Ta
-    github: dantatata
+    github: dantaclaus
