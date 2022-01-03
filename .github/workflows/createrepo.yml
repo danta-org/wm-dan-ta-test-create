@@ -22,3 +22,14 @@ jobs:
           org-admin-token: '${{ secrets.ORG_ADMIN_ACCESS_TOKEN }}'
       - name: Log URL to the repo
         run: echo "The new repo is ${{ steps.create-repo.outputs.repo-url }}"
+      - name: Pushes to another repository
+        uses: cpina/github-action-push-to-another-repository@main
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.ORG_ADMIN_ACCESS_TOKEN }}
+        with:
+          source-directory: 'templates'
+          destination-github-username: 'danta-org'
+          destination-repository-name: '${{ steps.create-repo.outputs.repo-url }}'
+          target-directory: '.github'
+          user-email: dan.ta@me.com
+          target-branch: main
