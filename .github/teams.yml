@@ -3,3 +3,13 @@ probotteam:
   members:
   - name: Dan Ta
     github: dantaclaus
+newteam:
+  description: A new team
+  members:
+  - name: Dan Ta
+    github: dantaclaus
+dansteam:
+  description: Dantatata's team
+  members:
+  - name: Dan Ta
+    github: dantatata
