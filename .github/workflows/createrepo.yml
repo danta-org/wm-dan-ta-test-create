@@ -22,6 +22,13 @@ jobs:
           org-admin-token: '${{ secrets.ORG_ADMIN_ACCESS_TOKEN }}'
       - name: Log URL to the repo
         run: echo "The new repo is ${{ steps.create-repo.outputs.repo-url }}"
+      - name: Create Branch
+        uses: GuillaumeFalourd/create-other-repo-branch-action@v1
+        with:
+          repository_owner: danta-org
+          repository_name: ${{ github.event.inputs.repo-name }}
+          new_branch_name: main
+          access_token: ${{ secrets.ORG_ADMIN_ACCESS_TOKEN}}
       - name: Pushes to another repository
         uses: cpina/github-action-push-to-another-repository@main
         env:
