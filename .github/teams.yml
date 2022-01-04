@@ -14,3 +14,8 @@ dansteam:
   members:
   - name: Dan Ta
     github: dantatata
+anotherteam:
+  description: Dantatata's team
+  members:
+  - name: Dan Ta
+    github: dantatata
