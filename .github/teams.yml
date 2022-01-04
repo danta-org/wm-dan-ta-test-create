@@ -1,5 +1,6 @@
 contributor:
   description: The amazing design team
+  team_sync_ignored: true
   members:
   - name: Dan Ta
     github: dantatata
